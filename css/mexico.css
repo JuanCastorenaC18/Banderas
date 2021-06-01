@@ -1,0 +1,157 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background: url('../img/fondomez.jpg'),#000;
+	background-size: cover;
+	background-attachment: fixed;
+	font-family:'Open Sans',Sans-serif, Arial, Helvetica;
+}
+#particles-js {
+	width: 100%;
+	height:100vh;
+	position: fixed;
+	z-index: -1;
+	background:rgba(0,0,0,.8);
+}
+
+.contenedor {
+	overflow: hidden;
+	margin-bottom: auto;
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+	height: 450px;
+	display: flex;
+	align-items:center;
+    background-color: transparent;
+    opacity: 100%;
+}
+.contebandera {
+	opacity: 100%;
+    margin: 20px;
+	text-align: center;
+}
+.contebandera a{
+    display: inline-block;
+}
+.contebandera:hover figure{
+    transform: perspective(600px) rotateY(180deg);
+    box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+}
+figure{
+    width: 600px;
+    height: 350px;
+    margin-left: 200px;
+	text-align: center;
+    position: flex;
+    transition: all ease .5s;
+    transform-style: preserve-3d;
+    transform: perspective(600px) rotateY(0deg);
+}
+figure .frontal,
+figure .trasera{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    transition: all ease .5s;
+}
+figure .frontal{
+    display: block;
+}
+
+figure .trasera{
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    color: #fff;
+    transform: perspective(600px) rotateY(180deg);
+    backface-visibility: hidden;
+    overflow: auto;
+    
+    background: rgba(0,104,71,1);
+    background: linear-gradient(135deg, rgba(0,104,71,1) 0%, rgba(206,17,38,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a51425', endColorstr='#05a6b9', GradientType=1 );
+}
+figure .trasera .titulo{
+    color: #FFF;
+    font-weight: normal;
+    margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+}
+figure .trasera hr{
+    height: 2px;
+    background: #fff;
+    border: none;
+    margin-bottom: 20px;
+    opacity: .5;
+}
+figure .trasera p{
+    color: #FFF;
+    font-weight: normal;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+	text-align: justify;
+}
+.d1{
+	width: 40%;
+	float: left;
+}
+.d2{
+	width: 40%;
+	float: right;
+}
+@media screen and (max-width: 992px) {
+    figure .trasera{
+        backface-visibility: visible;
+        transform: perspective(600px) rotateY(0deg);
+    }
+    
+    .contebandera:hover figure{
+        backface-visibility: visible;
+        transform: perspective(600px) rotateY(0deg);
+    }
+}
+.bandera{
+	width: 600px;
+    height: 350px;
+    margin-left: 0px;
+	text-align: center;
+    position: flex;
+    transition: all ease .5s;
+    transform-style: preserve-3d;
+    transform: perspective(600px) rotateY(0deg);
+}
+.bandera{
+	width: 600px;
+    height: 350px;
+}
+.mex1{
+	background-color: #006847;
+	width:33.33%;
+	height: 100%;
+	float: left;
+}
+.mex2{
+	background-color: #FFF;
+	width:33.33%;
+	height: 100%;
+	float: left;
+}
+.mex3{
+	background-color: #CE1126;
+	width:33.33%;
+	height: 100%;
+	float: left;
+}
+.logomx{
+	height: 150px;
+	width: 70%;
+	margin-top: 100px;
+}
